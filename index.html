@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gender In Academia</title>
-    
+
     <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/dc.min.css" type="text/css" />
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
-    
+
     <script type="text/javascript" src="static/js/d3.min.js"></script>
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
@@ -17,22 +18,67 @@
     <script type="text/javascript" src="static/js/graph.js"></script>
 
 </head>
+
 <body>
-    
-    <h1>Gender In Academia</h1>
-    
-    <!-- drop box for group selector -->
-    <div id="discipline-selector"></div>
-    <!-- chart to show gender balance in advanced roles -->
-    <div id="gender-balance"></div>
-    <!-- chart to show relative pay in advanced roles -->
-    <div id="average-salary"></div>
-    <!-- stacked chart to show relative numbers in different advanced roles -->
-    <div id="rank-distribution"></div>
-    <!-- charts to show numbers of men vs women in roles -->
-    <div class="number-box" id="percent-of-women-professors"></div>
-    <div class="number-box" id="percent-of-men-professors"></div>
-    
-    <div id="service-salary"></div>
+
+    <div class="container">
+
+        <div class="row">
+            <h1>Gender In Academia</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-5">Select Discipline</div>
+        </div>
+
+        <div class="row">
+            <!-- drop box for group selector -->
+            <div class="col-md-offset-5" id="discipline-selector"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 text-center">Less than half of the female academics in the study are professors</div>
+            <div class="col-md-6 text-center">A majority of the male academics are at the professor level</div>
+        </div>
+
+        <div class="row">
+            <!-- charts to show numbers of men vs women in roles -->
+            <div class="col-md-6 number-box" id="percent-of-women-professors"></div>
+            <div class="col-md-6 number-box" id="percent-of-men-professors"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 text-center">Men outnumber women 10 to 1</div>
+            <div class="col-md-4 text-center">Men earn on avergae 10% more</div>
+            <div class="col-md-4 text-center">Distribution of ranks is weighted towards the upper level for men</div>
+        </div>
+
+        <div class="row">
+            <!-- chart to show gender balance in advanced roles -->
+            <div class="col-md-4" id="gender-balance"></div>
+            <!-- chart to show relative pay in advanced roles -->
+            <div class="col-md-4" id="average-salary"></div>
+            <!-- stacked chart to show relative numbers in different advanced roles -->
+            <div class="col-md-4" id="rank-distribution"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-offset-2">There appears to be little or no correlation between salary and years of service</div>
+        </div>
+        <div class="row">
+            <!-- chart to show salary vs experience between gender roles-->
+            <div class="col-md-offset-2" id="service-salary"></div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-offset-2">There is a very loose correlation between salary and years since receiving a PhD</div>
+        </div>
+        <div class="row">
+             <div class="col-md-offset-2" id="phd-salary"></div>
+        </div>
+
+    </div>
+
 </body>
+
 </html>
